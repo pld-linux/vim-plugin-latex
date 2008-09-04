@@ -25,15 +25,12 @@ they provide tools starting from macros to speed up editing LaTeX
 documents to compiling tex files to forward searching .dvi documents.
 
 %prep
-mkdir latexsuite && cd latexsuite
-tar xvf %{SOURCE0}
+%setup -qc
 
 %install
 rm -rf $RPM_BUILD_ROOT
-cd latexsuite
-rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_vimdatadir}
-cp -r * $RPM_BUILD_ROOT%{_vimdatadir}
+cp -a . $RPM_BUILD_ROOT%{_vimdatadir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
