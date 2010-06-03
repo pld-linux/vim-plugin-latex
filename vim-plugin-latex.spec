@@ -1,13 +1,16 @@
+%define shortname vim-latex
+%define snapdate 20100129
+%define rev 1104
 Summary:	Vim plugin: LaTeX
 Name:		vim-plugin-latex
-Version:	20060325
-Release:	1
+Version:	1.8.23
+Release:	1.%{snapdate}.%{rev}
 License:	vim
 Group:		Applications/Editors/Vim
-Source0:	http://vim-latex.sourceforge.net/download/latexSuite%{version}.tar.gz
-# Source0-md5:	f7bdb270508a8a88339ff857a52986ff
+Source0:	http://downloads.sourceforge.net/project/%{shortname}/snapshots/%{shortname}-1.8.23-%{snapdate}-r%{rev}.tar.gz
+# Source0-md5:	1d8e6a05a2e07245d22f1afbae474f5e
+Epoch:		1
 URL:		http://vim-latex.sourceforge.net/
-# for _vimdatadir existence
 Requires:	vim-rt >= 4:6.3.058-3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
