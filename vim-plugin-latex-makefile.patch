@@ -1,0 +1,10 @@
+--- Makefile.old	2010-08-14 11:56:53.000000000 +0200
++++ Makefile	2010-08-14 11:57:06.000000000 +0200
+@@ -1,5 +1,5 @@
+-PREFIX = /usr/local
+-VIMDIR = $(PREFIX)/share/vim
++PREFIX = /usr
++VIMDIR = $(PREFIX)/share/vim/vimfiles
+ BINDIR = $(PREFIX)/bin
+ 
+ VERSION=1.8.23

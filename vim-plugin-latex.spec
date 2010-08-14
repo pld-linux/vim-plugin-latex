@@ -9,6 +9,7 @@ License:	vim
 Group:		Applications/Editors/Vim
 Source0:	http://downloads.sourceforge.net/project/%{shortname}/snapshots/%{shortname}-1.8.23-%{snapdate}-r%{rev}.tar.gz
 # Source0-md5:	1d8e6a05a2e07245d22f1afbae474f5e
+Patch0:		%{name}-makefile.patch
 Epoch:		1
 URL:		http://vim-latex.sourceforge.net/
 Requires:	vim-rt >= 4:6.3.058-3
@@ -28,16 +29,24 @@ they provide tools starting from macros to speed up editing LaTeX
 documents to compiling tex files to forward searching .dvi documents.
 
 %prep
-%setup -qc
+%setup -qn vim-latex-%{version}-%{snapdate}-r%{rev}
+%patch0
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_vimdatadir}
-cp -a . $RPM_BUILD_ROOT%{_vimdatadir}
+%{__make} install \
+	DESTDIR="$RPM_BUILD_ROOT"
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_vimdatadir}/*
+%attr(755,root,root) %{_bindir}/latextags
+%attr(755,root,root) %{_bindir}/ltags
+%{_vimdatadir}/compiler/*
+%{_vimdatadir}/doc/*
+%{_vimdatadir}/ftplugin/*
+%{_vimdatadir}/indent/*
+%{_vimdatadir}/plugin/*
