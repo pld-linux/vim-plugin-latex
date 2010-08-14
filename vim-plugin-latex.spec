@@ -1,10 +1,11 @@
 %define shortname vim-latex
 %define snapdate 20100129
 %define rev 1104
+%define rel 1
 Summary:	Vim plugin: LaTeX
 Name:		vim-plugin-latex
 Version:	1.8.23
-Release:	1.%{snapdate}.%{rev}
+Release:	1.%{snapdate}.%{rev}.%{rel}
 License:	vim
 Group:		Applications/Editors/Vim
 Source0:	http://downloads.sourceforge.net/project/%{shortname}/snapshots/%{shortname}-1.8.23-%{snapdate}-r%{rev}.tar.gz
