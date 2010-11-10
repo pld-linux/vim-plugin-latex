@@ -1,6 +1,6 @@
 %define shortname vim-latex
-%define snapdate 20100129
-%define rev 1104
+%define snapdate 20101027
+%define rev 1112
 %define rel 1
 Summary:	Vim plugin: LaTeX
 Name:		vim-plugin-latex
@@ -8,8 +8,8 @@ Version:	1.8.23
 Release:	1.%{snapdate}.%{rev}.%{rel}
 License:	vim
 Group:		Applications/Editors/Vim
-Source0:	http://downloads.sourceforge.net/project/%{shortname}/snapshots/%{shortname}-1.8.23-%{snapdate}-r%{rev}.tar.gz
-# Source0-md5:	1d8e6a05a2e07245d22f1afbae474f5e
+Source0:	http://downloads.sourceforge.net/project/%{shortname}/snapshots/%{shortname}-%{version}-%{snapdate}-r%{rev}.tar.gz
+# Source0-md5:	2f4421a9aab18d095c9361b346725255
 Patch0:		%{name}-makefile.patch
 Epoch:		1
 URL:		http://vim-latex.sourceforge.net/
