@@ -13,6 +13,7 @@ Source0:	http://downloads.sourceforge.net/project/%{shortname}/snapshots/%{short
 Patch0:		%{name}-makefile.patch
 Epoch:		1
 URL:		http://vim-latex.sourceforge.net/
+BuildRequires:	rpm-pythonprov
 Requires:	vim-rt >= 4:6.3.058-3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
