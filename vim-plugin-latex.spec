@@ -32,7 +32,7 @@ documents to compiling tex files to forward searching .dvi documents.
 
 %prep
 %setup -qn vim-latex-%{version}-%{snapdate}-git%{rev}
-%patch0
+%patch -P0
 
 %install
 rm -rf $RPM_BUILD_ROOT
